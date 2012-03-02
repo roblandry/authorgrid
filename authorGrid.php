@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Author Grid
+Plugin Name: Author Grid (edited by Rob)
 Plugin URI: http://www.miniaturebuddha.com/
 Description: Display authors in a grid
 Author: Matt Diamondstone
@@ -35,15 +35,19 @@ function authorGrid()
 	$width = ($authorGrid_options['avSize']+5)*$authorGrid_options['number'];
 
 	// SET DIV
-	echo '<div style="padding: 0px; width: '.$width.'px; margin-left: 5px; margin-top: 3px;">';
+//	echo '<div style="padding: 0px; width: '.$width.'px; margin-left: 5px; margin-top: 3px;">';
+
+//Edit
+	echo '<div>';
+
 	
 	// IF WE'RE DISPLAYING BY COLUMNS
 	if($authorGrid_options['displayType'] == 'cols') {
 		$i = 1;
 		foreach($author_ids as $author) {
 
-			// DISPLAY AVATAR AS LINK TO AUTHOR'S POSTS PAGE
-			echo "<a href=\"".get_bloginfo('siteurl')."/author/".$author->user_nicename."\" style=\"margin-right: 1px;\">";
+			// DISPLAY AVATAR AS LINK TO AUTHOR'S POSTS PAGE /changed siteurl to wpurl
+			echo "<a href=\"".get_bloginfo('wpurl')."/author/".$author->user_nicename."\" style=\"margin-right: 1px;\">";
 			echo get_avatar($author->ID, $authorGrid_options['avSize'], none, $author->display_name);
 			echo "</a>\n";
 			$i++;
@@ -69,13 +73,13 @@ function authorGrid()
 		$r = 0;
 		foreach($author_ids as $author) {
 
-			// FIX TOP AND BOTTOM MARGINS FOR ONE-COLUMN DISPLAYS, DISPLAY AVATARS
+			// FIX TOP AND BOTTOM MARGINS FOR ONE-COLUMN DISPLAYS, DISPLAY AVATARS /changed siteurl to wpurl
 			if($numberOfColumns == 1) {
-				echo "<a href=\"".get_bloginfo('siteurl')."/author/".$author->user_nicename."\" style=\"margin: 1px 0px 0px 0px; padding: 0px;\" >";
+				echo "<a href=\"".get_bloginfo('wpurl')."/author/".$author->user_nicename."\" style=\"margin: 1px 0px 0px 0px; padding: 0px;\" >";
 				echo get_avatar($author->ID, $authorGrid_options['avSize'], none, $author->display_name);
 				echo "</a>\n";
 			} else {
-				echo "<a href=\"".get_bloginfo('siteurl')."/author/".$author->user_nicename."\" style=\"margin: 0px 2px 0px 0px; padding: 0px;\" >";
+				echo "<a href=\"".get_bloginfo('wpurl')."/author/".$author->user_nicename."\" style=\"margin: 0px 2px 0px 0px; padding: 0px;\" >";
 				echo get_avatar($author->ID, $authorGrid_options['avSize'], none, $author->display_name);
 				echo "</a>\n";
 			}
@@ -118,7 +122,9 @@ function widget_authorGrid($args) {
 	}
 	extract($args);
 	echo $before_widget;
-	echo $before_title;?><a><?php echo $authorGrid_options['title']; ?></a><?php echo $after_title;
+/*	echo $before_title;?><a><php echo $authorGrid_options['title']; ></a><php echo $after_title; */
+//edit
+	echo $before_title;?><?php echo $authorGrid_options['title']; ?><?php echo $after_title;
 	authorGrid();
 	echo $after_widget;
 }
