@@ -4,7 +4,7 @@ Plugin Name: Author Grid (edited by Rob)
 Plugin URI: http://www.miniaturebuddha.com/
 Description: Display authors in a grid
 Author: Matt Diamondstone
-Version: 1
+Version: 1.1
 Author URI: http://www.miniaturebuddha.com/
 */
  
