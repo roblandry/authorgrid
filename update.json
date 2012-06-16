@@ -2,37 +2,14 @@
   "name":"Author Grid",
   "slug":"authorgrid",
   "version":"1.1",
-  "author":"mdiamondstone<\/a>",
+  "author":"mdiamondstone</a>",
   "author_profile":"http://www.miniaturebuddha.com/",
-  "contributors":{"Rob Landry":"http:\/\/www.landryonline.com"},
-  "requires":"3.4",
-  "tested":"3.5",
+  "contributors":{"Rob Landry":"http://www.landryonline.com"},
+  "requires":"3.3",
+  "tested":"3.3",
   "last_updated":"2012-06-15",
   "added":"2010-02-03",
   "homepage":"http://www.miniaturebuddha.com/",
-  "sections":
-  {
-    "description":"authorGrid is a sidebar widget that displays the avatar of any author on your blog with at least one published post in grid form. You 
-can set how large the avatar should be, how many columns (or rows) you’d like in the grid, and the display title of the widget.", 
-    "installation":"1. Install the plugin (upload the authorGrid/ folder to your plugins directory)
-2. Activate the plugin in 'plugins' in the Dashboard
-3. Choose “Appearance” > “Widgets”
-4. Find the “authorGrid” widget, and drag it to your desired location on your sidebar.
-5. Set the title, whether you’d like to set the number of columns or the number of rows, and then set the number.
-6. Choose the size at which you’d like the avatars to be displayed. (this may be a guess and check process to fit with your theme)
-7. Click save, and enjoy!",
-    "screenshots":"1. authorGrid.png",
-    "faq":"= How great is this plugin? =
-
-Pretty great.
-
-= How can I get in touch with you? =
-
-Visit http://www.miniaturebuddha.com/",
-    "other_notes":""
-  },
   "short_description":null,
-  "download_url":"https:\/\/github.com\/downloads\/roblandry\/authorgrid\/authorgrid.zip",
-  "tags":
-  {""},
-  "upgrade_notice":"authorgrid"}
+  "download_url":"https://github.com/downloads/roblandry/authorgrid/authorgrid.zip",
+  "upgrade_notice":"authorgrid" }
