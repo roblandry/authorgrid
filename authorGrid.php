@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Author Grid (edited by Rob)
+Plugin Name: Author Grid (Edited)
 Plugin URI: http://www.miniaturebuddha.com/
 Description: Display authors in a grid
 Author: Matt Diamondstone
-Version: 1.1
+Version: 1.0
 Author URI: http://www.miniaturebuddha.com/
 */
  
@@ -215,4 +215,9 @@ function authorGrid_init()
 	}
 
 add_action("plugins_loaded", "authorGrid_init");
+require 'plugin-update-checker.php';
+$authorgridUpdateChecker = new PluginUpdateChecker(
+	'https://raw.github.com/roblandry/authorgrid/master/update.json', 
+	__FILE__, 'authorgrid'
+);
 ?>
