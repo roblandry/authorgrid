@@ -1,2 +1,0 @@
-Version@1.1@
-Message@Edited Depreciated get_bloginfo('siteurl') -> get_bloginfo('wpurl')
