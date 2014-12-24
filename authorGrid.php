@@ -38,7 +38,7 @@ function authorGrid()
 //	echo '<div style="padding: 0px; width: '.$width.'px; margin-left: 5px; margin-top: 3px;">';
 
 //Edit
-	echo '<div>';
+	echo '<div style="text-align:center">';
 
 	
 	// IF WE'RE DISPLAYING BY COLUMNS
@@ -47,7 +47,7 @@ function authorGrid()
 		foreach($author_ids as $author) {
 
 			// DISPLAY AVATAR AS LINK TO AUTHOR'S POSTS PAGE /changed siteurl to wpurl
-			echo "<a href=\"".get_bloginfo('wpurl')."/author/".$author->user_nicename."\" style=\"margin-right: 1px;\">";
+			echo "<a href=\"".get_bloginfo('url')."/author/".$author->user_nicename."\" style=\"margin-right: 1px;\">";
 			echo get_avatar($author->ID, $authorGrid_options['avSize'], none, $author->display_name);
 			echo "</a>\n";
 			$i++;
@@ -75,11 +75,11 @@ function authorGrid()
 
 			// FIX TOP AND BOTTOM MARGINS FOR ONE-COLUMN DISPLAYS, DISPLAY AVATARS /changed siteurl to wpurl
 			if($numberOfColumns == 1) {
-				echo "<a href=\"".get_bloginfo('wpurl')."/author/".$author->user_nicename."\" style=\"margin: 1px 0px 0px 0px; padding: 0px;\" >";
+				echo "<a href=\"".get_bloginfo('url')."/author/".$author->user_nicename."\" style=\"margin: 1px 0px 0px 0px; padding: 0px;\" >";
 				echo get_avatar($author->ID, $authorGrid_options['avSize'], none, $author->display_name);
 				echo "</a>\n";
 			} else {
-				echo "<a href=\"".get_bloginfo('wpurl')."/author/".$author->user_nicename."\" style=\"margin: 0px 2px 0px 0px; padding: 0px;\" >";
+				echo "<a href=\"".get_bloginfo('url')."/author/".$author->user_nicename."\" style=\"margin: 0px 2px 0px 0px; padding: 0px;\" >";
 				echo get_avatar($author->ID, $authorGrid_options['avSize'], none, $author->display_name);
 				echo "</a>\n";
 			}
@@ -104,7 +104,7 @@ function authorGrid()
 		}
 	}
 	// END THE DIV
-	echo '</div>';
+	echo '</div><div style="clear:both;"></div>';
 }
  
 function widget_authorGrid($args) {
