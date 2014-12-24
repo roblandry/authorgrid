@@ -6,10 +6,10 @@
   "author_profile":"http://www.miniaturebuddha.com/",
   "contributors":{"Rob Landry":"http://www.landryonline.com"},
   "requires":"3.3",
-  "tested":"3.3",
+  "tested":"4.1",
   "last_updated":"2014-12-24",
   "added":"2010-02-03",
   "homepage":"http://www.miniaturebuddha.com/",
   "short_description":null,
-  "download_url":"https://github.com/downloads/roblandry/authorgrid/authorgrid.zip",
+  "download_url":"https://github.com/roblandry/authorgrid/archive/master.zip",
   "upgrade_notice":"authorgrid" }
